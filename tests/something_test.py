@@ -14,12 +14,20 @@ def test_always():
     assert Model("foo", "bar") == Model(Always(), "bar")
 
 
+def test_always_boolean():
+    assert bool(Always()) is True
+
+
 def test_never():
     assert (1 == Never()) is False
     assert ({} == Never()) is False
     assert ({"foo": 42} == Never()) is False
 
     assert Model("foo", "bar") != Model(Never(), "bar")
+
+
+def test_never_boolean():
+    assert bool(Never()) is False
 
 
 def test_omit():

@@ -10,12 +10,18 @@ class Always:
     def __eq__(self, other: Any) -> bool:
         return True
 
+    def __bool__(self) -> bool:
+        return True
+
     def __repr__(self) -> str:
         return "Always()"
 
 
 class Never:
     def __eq__(self, other: Any) -> bool:
+        return False
+
+    def __bool__(self) -> bool:
         return False
 
     def __repr__(self) -> str:
