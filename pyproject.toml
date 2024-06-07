@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "something"
+version = "0.1.0"
+description = "Assert relevant object attributes"
+authors = ["Xavier Barbosa <clint.northwood@gmail.com>"]
+readme = "README.md"
+packages = [
+    {include = "something", from="src"}
+]
+classifiers = [
+    "Framework :: Pytest"
+]
+
+[tool.poetry.plugins."pytest11"]
+something = "something.pytest_plugin"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "*"
+pytest = "*"
+mypy = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
