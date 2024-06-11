@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import dataclasses
-from typing import Any, Generic, TypeVar
+from typing import Any, Generic, Mapping, TypeVar
 
 T = TypeVar("T")
 
@@ -70,3 +70,25 @@ class Patched(Generic[T]):
 
     def __eq__(self, other: Any) -> bool:
         return self.wrapped == other
+
+
+class contains:
+    def __init__(self, data: Mapping[Any, Any]) -> None:
+        self.data: Mapping[Any, Any] = data
+
+    def __eq__(self, other: Any) -> bool:
+        if not isinstance(other, Mapping):
+            raise TypeError("Omit object is not comparable")
+        return self.data.items() <= other.items()
+
+    def __lt__(self, other: Any) -> bool:
+        raise TypeError("Operator < is not supported by contains")
+
+    def __le__(self, other: Any) -> bool:
+        raise TypeError("Operator <= is not supported by contains")
+
+    def __gt__(self, other: Any) -> bool:
+        raise TypeError("Operator > is not supported by contains")
+
+    def __ge__(self, other: Any) -> bool:
+        raise TypeError("Operator >= is not supported by contains")

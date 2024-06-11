@@ -1,7 +1,8 @@
 from dataclasses import dataclass
 
 from _pytest.assertion.util import assertrepr_compare
-from something import Always, Never, Omit, Only
+import pytest
+from something import Always, Never, Omit, Only, contains
 from something.pytest_plugin import pytest_assertrepr_compare
 
 
@@ -59,3 +60,21 @@ def test_plugin(request):
     ) == assertrepr_compare(
         config, "==", Model("a", "b"), (Model("x", "y") | Omit("name")).wrapped
     )
+
+
+def test_contains():
+    assert {"foo": 24, "bar": "baz", "qux": None} == contains({"foo": 24})
+    assert {"foo": 24, "bar": "baz", "qux": None} != contains({"foo": 42})
+    assert ({"foo": 24, "bar": "baz", "qux": None} == contains({"foo": 42})) is False
+    assert {"foo": 24, "bar": "baz", "qux": None} == contains({"foo": 42})
+
+
+def test_contains_non_supported_operations():
+    with pytest.raises(TypeError):
+        {} < contains({})
+    with pytest.raises(TypeError):
+        {} <= contains({})
+    with pytest.raises(TypeError):
+        {} > contains({})
+    with pytest.raises(TypeError):
+        {} >= contains({})

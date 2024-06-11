@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Mapping
 
 import pytest
 from _pytest.assertion.util import assertrepr_compare
@@ -14,15 +14,31 @@ def pytest_assertrepr_compare(
     if isinstance(right, something.Always | something.Never):
         return [f"{left!r} never match"]
 
-    rewrite = False
+    patched = False
     if isinstance(left, something.Patched):
-        rewrite = True
+        patched = True
         left = left.wrapped
     if isinstance(right, something.Patched):
-        rewrite = True
+        patched = True
         right = right.wrapped
 
-    if rewrite:
+    if patched:
         return assertrepr_compare(config, op, left, right)
+
+    contained = False
+    if isinstance(left, Mapping) and isinstance(right, something.contains):
+        contained = True
+        right = dict(left) | dict(right.data)
+    if isinstance(left, something.contains) and isinstance(right, Mapping):
+        contained = True
+        left = dict(right) | dict(left.data)
+
+    if contained:
+        message = assertrepr_compare(config, op, left, right) or []
+        if op == "==":
+            message.insert(0, f"{left} contains {right}")
+        elif op == "!=":
+            message.insert(0, f"{left} does not contain {right}")
+        return message
 
     return None
