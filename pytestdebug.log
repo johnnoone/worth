@@ -1,5 +1,5 @@
 versions pytest-8.0.2, python-3.12.2.final.0
-cwd=/Users/x.barbosa/Sources/lab/py/something
+cwd=/Users/x.barbosa/Sources/lab/py/worth
 args=('--verbose', '-svvv', '--debug')
 
   pytest_cmdline_main [hook]
@@ -207,8 +207,8 @@ args=('--verbose', '-svvv', '--debug')
           manager: <_pytest.config.PytestPluginManager object at 0x1039a0c50>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <module 'conftest' from '/Users/x.barbosa/Sources/lab/py/something/tests/conftest.py'>
-          plugin_name: /Users/x.barbosa/Sources/lab/py/something/tests/conftest.py
+          plugin: <module 'conftest' from '/Users/x.barbosa/Sources/lab/py/worth/tests/conftest.py'>
+          plugin_name: /Users/x.barbosa/Sources/lab/py/worth/tests/conftest.py
           manager: <_pytest.config.PytestPluginManager object at 0x1039a0c50>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
@@ -420,8 +420,8 @@ args=('--verbose', '-svvv', '--debug')
           manager: <_pytest.config.PytestPluginManager object at 0x1039a0c50>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <module 'conftest' from '/Users/x.barbosa/Sources/lab/py/something/tests/conftest.py'>
-          plugin_name: /Users/x.barbosa/Sources/lab/py/something/tests/conftest.py
+          plugin: <module 'conftest' from '/Users/x.barbosa/Sources/lab/py/worth/tests/conftest.py'>
+          plugin_name: /Users/x.barbosa/Sources/lab/py/worth/tests/conftest.py
           manager: <_pytest.config.PytestPluginManager object at 0x1039a0c50>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
@@ -461,130 +461,130 @@ args=('--verbose', '-svvv', '--debug')
       finish pytest_plugin_registered --> [] [hook]
       pytest_report_header [hook]
           config: <_pytest.config.Config object at 0x1038105f0>
-          start_path: /Users/x.barbosa/Sources/lab/py/something
-          startdir: /Users/x.barbosa/Sources/lab/py/something
-      finish pytest_report_header --> [['rootdir: /Users/x.barbosa/Sources/lab/py/something', 'configfile: pyproject.toml'], 'cachedir: .pytest_cache', ['using: pytest-8.0.2']] [hook]
+          start_path: /Users/x.barbosa/Sources/lab/py/worth
+          startdir: /Users/x.barbosa/Sources/lab/py/worth
+      finish pytest_report_header --> [['rootdir: /Users/x.barbosa/Sources/lab/py/worth', 'configfile: pyproject.toml'], 'cachedir: .pytest_cache', ['using: pytest-8.0.2']] [hook]
     finish pytest_sessionstart --> [] [hook]
     pytest_collection [hook]
         session: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
-    perform_collect <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0> ['/Users/x.barbosa/Sources/lab/py/something'] [collection]
+    perform_collect <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0> ['/Users/x.barbosa/Sources/lab/py/worth'] [collection]
         pytest_collectstart [hook]
             collector: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
         finish pytest_collectstart --> [] [hook]
         pytest_make_collect_report [hook]
             collector: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
-        processing argument (PosixPath('/Users/x.barbosa/Sources/lab/py/something'), []) [collection]
+        processing argument (PosixPath('/Users/x.barbosa/Sources/lab/py/worth'), []) [collection]
             pytest_collect_directory [hook]
-                path: /Users/x.barbosa/Sources/lab/py/something
+                path: /Users/x.barbosa/Sources/lab/py/worth
                 parent: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
-            finish pytest_collect_directory --> <Dir something> [hook]
+            finish pytest_collect_directory --> <Dir worth> [hook]
         finish pytest_make_collect_report --> <CollectReport '' lenresult=1 outcome='passed'> [hook]
         pytest_collectreport [hook]
             report: <CollectReport '' lenresult=1 outcome='passed'>
         finish pytest_collectreport --> [] [hook]
-    genitems <Dir something> [collection]
+    genitems <Dir worth> [collection]
       pytest_collectstart [hook]
-          collector: <Dir something>
+          collector: <Dir worth>
       finish pytest_collectstart --> [] [hook]
       pytest_make_collect_report [hook]
-          collector: <Dir something>
+          collector: <Dir worth>
         pytest_ignore_collect [hook]
             config: <_pytest.config.Config object at 0x1038105f0>
-            collection_path: /Users/x.barbosa/Sources/lab/py/something/.direnv
-            path: /Users/x.barbosa/Sources/lab/py/something/.direnv
+            collection_path: /Users/x.barbosa/Sources/lab/py/worth/.direnv
+            path: /Users/x.barbosa/Sources/lab/py/worth/.direnv
         finish pytest_ignore_collect --> True [hook]
         pytest_ignore_collect [hook]
             config: <_pytest.config.Config object at 0x1038105f0>
-            collection_path: /Users/x.barbosa/Sources/lab/py/something/.envrc
-            path: /Users/x.barbosa/Sources/lab/py/something/.envrc
+            collection_path: /Users/x.barbosa/Sources/lab/py/worth/.envrc
+            path: /Users/x.barbosa/Sources/lab/py/worth/.envrc
         finish pytest_ignore_collect --> None [hook]
         pytest_collect_file [hook]
-            parent: <Dir something>
-            file_path: /Users/x.barbosa/Sources/lab/py/something/.envrc
-            path: /Users/x.barbosa/Sources/lab/py/something/.envrc
+            parent: <Dir worth>
+            file_path: /Users/x.barbosa/Sources/lab/py/worth/.envrc
+            path: /Users/x.barbosa/Sources/lab/py/worth/.envrc
         finish pytest_collect_file --> [] [hook]
         pytest_ignore_collect [hook]
             config: <_pytest.config.Config object at 0x1038105f0>
-            collection_path: /Users/x.barbosa/Sources/lab/py/something/.git
-            path: /Users/x.barbosa/Sources/lab/py/something/.git
+            collection_path: /Users/x.barbosa/Sources/lab/py/worth/.git
+            path: /Users/x.barbosa/Sources/lab/py/worth/.git
         finish pytest_ignore_collect --> True [hook]
         pytest_ignore_collect [hook]
             config: <_pytest.config.Config object at 0x1038105f0>
-            collection_path: /Users/x.barbosa/Sources/lab/py/something/.gitignore
-            path: /Users/x.barbosa/Sources/lab/py/something/.gitignore
+            collection_path: /Users/x.barbosa/Sources/lab/py/worth/.gitignore
+            path: /Users/x.barbosa/Sources/lab/py/worth/.gitignore
         finish pytest_ignore_collect --> None [hook]
         pytest_collect_file [hook]
-            parent: <Dir something>
-            file_path: /Users/x.barbosa/Sources/lab/py/something/.gitignore
-            path: /Users/x.barbosa/Sources/lab/py/something/.gitignore
+            parent: <Dir worth>
+            file_path: /Users/x.barbosa/Sources/lab/py/worth/.gitignore
+            path: /Users/x.barbosa/Sources/lab/py/worth/.gitignore
         finish pytest_collect_file --> [] [hook]
         pytest_ignore_collect [hook]
             config: <_pytest.config.Config object at 0x1038105f0>
-            collection_path: /Users/x.barbosa/Sources/lab/py/something/.mypy_cache
-            path: /Users/x.barbosa/Sources/lab/py/something/.mypy_cache
+            collection_path: /Users/x.barbosa/Sources/lab/py/worth/.mypy_cache
+            path: /Users/x.barbosa/Sources/lab/py/worth/.mypy_cache
         finish pytest_ignore_collect --> True [hook]
         pytest_ignore_collect [hook]
             config: <_pytest.config.Config object at 0x1038105f0>
-            collection_path: /Users/x.barbosa/Sources/lab/py/something/.pytest_cache
-            path: /Users/x.barbosa/Sources/lab/py/something/.pytest_cache
+            collection_path: /Users/x.barbosa/Sources/lab/py/worth/.pytest_cache
+            path: /Users/x.barbosa/Sources/lab/py/worth/.pytest_cache
         finish pytest_ignore_collect --> True [hook]
         pytest_ignore_collect [hook]
             config: <_pytest.config.Config object at 0x1038105f0>
-            collection_path: /Users/x.barbosa/Sources/lab/py/something/README.md
-            path: /Users/x.barbosa/Sources/lab/py/something/README.md
+            collection_path: /Users/x.barbosa/Sources/lab/py/worth/README.md
+            path: /Users/x.barbosa/Sources/lab/py/worth/README.md
         finish pytest_ignore_collect --> None [hook]
         pytest_collect_file [hook]
-            parent: <Dir something>
-            file_path: /Users/x.barbosa/Sources/lab/py/something/README.md
-            path: /Users/x.barbosa/Sources/lab/py/something/README.md
+            parent: <Dir worth>
+            file_path: /Users/x.barbosa/Sources/lab/py/worth/README.md
+            path: /Users/x.barbosa/Sources/lab/py/worth/README.md
         finish pytest_collect_file --> [] [hook]
         pytest_ignore_collect [hook]
             config: <_pytest.config.Config object at 0x1038105f0>
-            collection_path: /Users/x.barbosa/Sources/lab/py/something/poetry.lock
-            path: /Users/x.barbosa/Sources/lab/py/something/poetry.lock
+            collection_path: /Users/x.barbosa/Sources/lab/py/worth/poetry.lock
+            path: /Users/x.barbosa/Sources/lab/py/worth/poetry.lock
         finish pytest_ignore_collect --> None [hook]
         pytest_collect_file [hook]
-            parent: <Dir something>
-            file_path: /Users/x.barbosa/Sources/lab/py/something/poetry.lock
-            path: /Users/x.barbosa/Sources/lab/py/something/poetry.lock
+            parent: <Dir worth>
+            file_path: /Users/x.barbosa/Sources/lab/py/worth/poetry.lock
+            path: /Users/x.barbosa/Sources/lab/py/worth/poetry.lock
         finish pytest_collect_file --> [] [hook]
         pytest_ignore_collect [hook]
             config: <_pytest.config.Config object at 0x1038105f0>
-            collection_path: /Users/x.barbosa/Sources/lab/py/something/pyproject.toml
-            path: /Users/x.barbosa/Sources/lab/py/something/pyproject.toml
+            collection_path: /Users/x.barbosa/Sources/lab/py/worth/pyproject.toml
+            path: /Users/x.barbosa/Sources/lab/py/worth/pyproject.toml
         finish pytest_ignore_collect --> None [hook]
         pytest_collect_file [hook]
-            parent: <Dir something>
-            file_path: /Users/x.barbosa/Sources/lab/py/something/pyproject.toml
-            path: /Users/x.barbosa/Sources/lab/py/something/pyproject.toml
+            parent: <Dir worth>
+            file_path: /Users/x.barbosa/Sources/lab/py/worth/pyproject.toml
+            path: /Users/x.barbosa/Sources/lab/py/worth/pyproject.toml
         finish pytest_collect_file --> [] [hook]
         pytest_ignore_collect [hook]
             config: <_pytest.config.Config object at 0x1038105f0>
-            collection_path: /Users/x.barbosa/Sources/lab/py/something/pytestdebug.log
-            path: /Users/x.barbosa/Sources/lab/py/something/pytestdebug.log
+            collection_path: /Users/x.barbosa/Sources/lab/py/worth/pytestdebug.log
+            path: /Users/x.barbosa/Sources/lab/py/worth/pytestdebug.log
         finish pytest_ignore_collect --> None [hook]
         pytest_collect_file [hook]
-            parent: <Dir something>
-            file_path: /Users/x.barbosa/Sources/lab/py/something/pytestdebug.log
-            path: /Users/x.barbosa/Sources/lab/py/something/pytestdebug.log
+            parent: <Dir worth>
+            file_path: /Users/x.barbosa/Sources/lab/py/worth/pytestdebug.log
+            path: /Users/x.barbosa/Sources/lab/py/worth/pytestdebug.log
         finish pytest_collect_file --> [] [hook]
         pytest_ignore_collect [hook]
             config: <_pytest.config.Config object at 0x1038105f0>
-            collection_path: /Users/x.barbosa/Sources/lab/py/something/src
-            path: /Users/x.barbosa/Sources/lab/py/something/src
+            collection_path: /Users/x.barbosa/Sources/lab/py/worth/src
+            path: /Users/x.barbosa/Sources/lab/py/worth/src
         finish pytest_ignore_collect --> None [hook]
         pytest_collect_directory [hook]
-            path: /Users/x.barbosa/Sources/lab/py/something/src
-            parent: <Dir something>
+            path: /Users/x.barbosa/Sources/lab/py/worth/src
+            parent: <Dir worth>
         finish pytest_collect_directory --> <Dir src> [hook]
         pytest_ignore_collect [hook]
             config: <_pytest.config.Config object at 0x1038105f0>
-            collection_path: /Users/x.barbosa/Sources/lab/py/something/tests
-            path: /Users/x.barbosa/Sources/lab/py/something/tests
+            collection_path: /Users/x.barbosa/Sources/lab/py/worth/tests
+            path: /Users/x.barbosa/Sources/lab/py/worth/tests
         finish pytest_ignore_collect --> None [hook]
         pytest_collect_directory [hook]
-            path: /Users/x.barbosa/Sources/lab/py/something/tests
-            parent: <Dir something>
+            path: /Users/x.barbosa/Sources/lab/py/worth/tests
+            parent: <Dir worth>
         finish pytest_collect_directory --> <Dir tests> [hook]
       finish pytest_make_collect_report --> <CollectReport '.' lenresult=2 outcome='passed'> [hook]
     genitems <Dir src> [collection]
@@ -595,53 +595,53 @@ args=('--verbose', '-svvv', '--debug')
           collector: <Dir src>
         pytest_ignore_collect [hook]
             config: <_pytest.config.Config object at 0x1038105f0>
-            collection_path: /Users/x.barbosa/Sources/lab/py/something/src/something
-            path: /Users/x.barbosa/Sources/lab/py/something/src/something
+            collection_path: /Users/x.barbosa/Sources/lab/py/worth/src/worth
+            path: /Users/x.barbosa/Sources/lab/py/worth/src/worth
         finish pytest_ignore_collect --> None [hook]
         pytest_collect_directory [hook]
-            path: /Users/x.barbosa/Sources/lab/py/something/src/something
+            path: /Users/x.barbosa/Sources/lab/py/worth/src/worth
             parent: <Dir src>
-        finish pytest_collect_directory --> <Package something> [hook]
+        finish pytest_collect_directory --> <Package worth> [hook]
       finish pytest_make_collect_report --> <CollectReport 'src' lenresult=1 outcome='passed'> [hook]
-    genitems <Package something> [collection]
+    genitems <Package worth> [collection]
       pytest_collectstart [hook]
-          collector: <Package something>
+          collector: <Package worth>
       finish pytest_collectstart --> [] [hook]
       pytest_make_collect_report [hook]
-          collector: <Package something>
+          collector: <Package worth>
         pytest_ignore_collect [hook]
             config: <_pytest.config.Config object at 0x1038105f0>
-            collection_path: /Users/x.barbosa/Sources/lab/py/something/src/something/__init__.py
-            path: /Users/x.barbosa/Sources/lab/py/something/src/something/__init__.py
+            collection_path: /Users/x.barbosa/Sources/lab/py/worth/src/worth/__init__.py
+            path: /Users/x.barbosa/Sources/lab/py/worth/src/worth/__init__.py
         finish pytest_ignore_collect --> None [hook]
         pytest_collect_file [hook]
-            parent: <Package something>
-            file_path: /Users/x.barbosa/Sources/lab/py/something/src/something/__init__.py
-            path: /Users/x.barbosa/Sources/lab/py/something/src/something/__init__.py
+            parent: <Package worth>
+            file_path: /Users/x.barbosa/Sources/lab/py/worth/src/worth/__init__.py
+            path: /Users/x.barbosa/Sources/lab/py/worth/src/worth/__init__.py
         finish pytest_collect_file --> [] [hook]
         pytest_ignore_collect [hook]
             config: <_pytest.config.Config object at 0x1038105f0>
-            collection_path: /Users/x.barbosa/Sources/lab/py/something/src/something/py.typed
-            path: /Users/x.barbosa/Sources/lab/py/something/src/something/py.typed
+            collection_path: /Users/x.barbosa/Sources/lab/py/worth/src/worth/py.typed
+            path: /Users/x.barbosa/Sources/lab/py/worth/src/worth/py.typed
         finish pytest_ignore_collect --> None [hook]
         pytest_collect_file [hook]
-            parent: <Package something>
-            file_path: /Users/x.barbosa/Sources/lab/py/something/src/something/py.typed
-            path: /Users/x.barbosa/Sources/lab/py/something/src/something/py.typed
+            parent: <Package worth>
+            file_path: /Users/x.barbosa/Sources/lab/py/worth/src/worth/py.typed
+            path: /Users/x.barbosa/Sources/lab/py/worth/src/worth/py.typed
         finish pytest_collect_file --> [] [hook]
         pytest_ignore_collect [hook]
             config: <_pytest.config.Config object at 0x1038105f0>
-            collection_path: /Users/x.barbosa/Sources/lab/py/something/src/something/pytest_plugin.py
-            path: /Users/x.barbosa/Sources/lab/py/something/src/something/pytest_plugin.py
+            collection_path: /Users/x.barbosa/Sources/lab/py/worth/src/worth/pytest_plugin.py
+            path: /Users/x.barbosa/Sources/lab/py/worth/src/worth/pytest_plugin.py
         finish pytest_ignore_collect --> None [hook]
         pytest_collect_file [hook]
-            parent: <Package something>
-            file_path: /Users/x.barbosa/Sources/lab/py/something/src/something/pytest_plugin.py
-            path: /Users/x.barbosa/Sources/lab/py/something/src/something/pytest_plugin.py
+            parent: <Package worth>
+            file_path: /Users/x.barbosa/Sources/lab/py/worth/src/worth/pytest_plugin.py
+            path: /Users/x.barbosa/Sources/lab/py/worth/src/worth/pytest_plugin.py
         finish pytest_collect_file --> [] [hook]
-      finish pytest_make_collect_report --> <CollectReport 'src/something' lenresult=0 outcome='passed'> [hook]
+      finish pytest_make_collect_report --> <CollectReport 'src/worth' lenresult=0 outcome='passed'> [hook]
       pytest_collectreport [hook]
-          report: <CollectReport 'src/something' lenresult=0 outcome='passed'>
+          report: <CollectReport 'src/worth' lenresult=0 outcome='passed'>
       finish pytest_collectreport --> [] [hook]
       pytest_collectreport [hook]
           report: <CollectReport 'src' lenresult=1 outcome='passed'>
@@ -654,88 +654,88 @@ args=('--verbose', '-svvv', '--debug')
           collector: <Dir tests>
         pytest_ignore_collect [hook]
             config: <_pytest.config.Config object at 0x1038105f0>
-            collection_path: /Users/x.barbosa/Sources/lab/py/something/tests/.mypy_cache
-            path: /Users/x.barbosa/Sources/lab/py/something/tests/.mypy_cache
+            collection_path: /Users/x.barbosa/Sources/lab/py/worth/tests/.mypy_cache
+            path: /Users/x.barbosa/Sources/lab/py/worth/tests/.mypy_cache
         finish pytest_ignore_collect --> True [hook]
         pytest_ignore_collect [hook]
             config: <_pytest.config.Config object at 0x1038105f0>
-            collection_path: /Users/x.barbosa/Sources/lab/py/something/tests/conftest.py
-            path: /Users/x.barbosa/Sources/lab/py/something/tests/conftest.py
+            collection_path: /Users/x.barbosa/Sources/lab/py/worth/tests/conftest.py
+            path: /Users/x.barbosa/Sources/lab/py/worth/tests/conftest.py
         finish pytest_ignore_collect --> None [hook]
         pytest_collect_file [hook]
             parent: <Dir tests>
-            file_path: /Users/x.barbosa/Sources/lab/py/something/tests/conftest.py
-            path: /Users/x.barbosa/Sources/lab/py/something/tests/conftest.py
+            file_path: /Users/x.barbosa/Sources/lab/py/worth/tests/conftest.py
+            path: /Users/x.barbosa/Sources/lab/py/worth/tests/conftest.py
         finish pytest_collect_file --> [] [hook]
         pytest_ignore_collect [hook]
             config: <_pytest.config.Config object at 0x1038105f0>
-            collection_path: /Users/x.barbosa/Sources/lab/py/something/tests/something_test.py
-            path: /Users/x.barbosa/Sources/lab/py/something/tests/something_test.py
+            collection_path: /Users/x.barbosa/Sources/lab/py/worth/tests/worth_test.py
+            path: /Users/x.barbosa/Sources/lab/py/worth/tests/worth_test.py
         finish pytest_ignore_collect --> None [hook]
         pytest_collect_file [hook]
             parent: <Dir tests>
-            file_path: /Users/x.barbosa/Sources/lab/py/something/tests/something_test.py
-            path: /Users/x.barbosa/Sources/lab/py/something/tests/something_test.py
+            file_path: /Users/x.barbosa/Sources/lab/py/worth/tests/worth_test.py
+            path: /Users/x.barbosa/Sources/lab/py/worth/tests/worth_test.py
           pytest_pycollect_makemodule [hook]
               parent: <Dir tests>
-              module_path: /Users/x.barbosa/Sources/lab/py/something/tests/something_test.py
-              path: /Users/x.barbosa/Sources/lab/py/something/tests/something_test.py
-          finish pytest_pycollect_makemodule --> <Module something_test.py> [hook]
-        finish pytest_collect_file --> [<Module something_test.py>] [hook]
+              module_path: /Users/x.barbosa/Sources/lab/py/worth/tests/worth_test.py
+              path: /Users/x.barbosa/Sources/lab/py/worth/tests/worth_test.py
+          finish pytest_pycollect_makemodule --> <Module worth_test.py> [hook]
+        finish pytest_collect_file --> [<Module worth_test.py>] [hook]
       finish pytest_make_collect_report --> <CollectReport 'tests' lenresult=1 outcome='passed'> [hook]
-    genitems <Module something_test.py> [collection]
+    genitems <Module worth_test.py> [collection]
       pytest_collectstart [hook]
-          collector: <Module something_test.py>
+          collector: <Module worth_test.py>
       finish pytest_collectstart --> [] [hook]
       pytest_make_collect_report [hook]
-          collector: <Module something_test.py>
-      find_module called for: something_test [assertion]
-      matched test file '/Users/x.barbosa/Sources/lab/py/something/tests/something_test.py' [assertion]
-      found cached rewritten pyc for /Users/x.barbosa/Sources/lab/py/something/tests/something_test.py [assertion]
-      find_module called for: something [assertion]
-      early skip of rewriting module: something.pytest_plugin [assertion]
+          collector: <Module worth_test.py>
+      find_module called for: worth_test [assertion]
+      matched test file '/Users/x.barbosa/Sources/lab/py/worth/tests/worth_test.py' [assertion]
+      found cached rewritten pyc for /Users/x.barbosa/Sources/lab/py/worth/tests/worth_test.py [assertion]
+      find_module called for: worth [assertion]
+      early skip of rewriting module: worth.pytest_plugin [assertion]
         pytest_pycollect_makeitem [hook]
-            collector: <Module something_test.py>
+            collector: <Module worth_test.py>
             name: @py_builtins
             obj: <module 'builtins' (built-in)>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
-            collector: <Module something_test.py>
+            collector: <Module worth_test.py>
             name: @pytest_ar
             obj: <module '_pytest.assertion.rewrite' from '/Users/x.barbosa/.pyenv/versions/3.12.2/lib/python3.12/site-packages/_pytest/assertion/rewrite.py'>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
-            collector: <Module something_test.py>
+            collector: <Module worth_test.py>
             name: dataclass
             obj: <function dataclass at 0x102a93e20>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
-            collector: <Module something_test.py>
+            collector: <Module worth_test.py>
             name: Always
-            obj: <class 'something.Always'>
+            obj: <class 'worth.Always'>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
-            collector: <Module something_test.py>
+            collector: <Module worth_test.py>
             name: Never
-            obj: <class 'something.Never'>
+            obj: <class 'worth.Never'>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
-            collector: <Module something_test.py>
+            collector: <Module worth_test.py>
             name: Omit
-            obj: <class 'something.Omit'>
+            obj: <class 'worth.Omit'>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
-            collector: <Module something_test.py>
+            collector: <Module worth_test.py>
             name: Only
-            obj: <class 'something.Only'>
+            obj: <class 'worth.Only'>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
-            collector: <Module something_test.py>
+            collector: <Module worth_test.py>
             name: pytest_assertrepr_compare
             obj: <function pytest_assertrepr_compare at 0x103b882c0>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
-            collector: <Module something_test.py>
+            collector: <Module worth_test.py>
             name: test_always
             obj: <function test_always at 0x103b29120>
           pytest_generate_tests [hook]
@@ -743,7 +743,7 @@ args=('--verbose', '-svvv', '--debug')
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_always>] [hook]
         pytest_pycollect_makeitem [hook]
-            collector: <Module something_test.py>
+            collector: <Module worth_test.py>
             name: test_never
             obj: <function test_never at 0x103b88040>
           pytest_generate_tests [hook]
@@ -751,7 +751,7 @@ args=('--verbose', '-svvv', '--debug')
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_never>] [hook]
         pytest_pycollect_makeitem [hook]
-            collector: <Module something_test.py>
+            collector: <Module worth_test.py>
             name: test_omit
             obj: <function test_omit at 0x103b88ae0>
           pytest_generate_tests [hook]
@@ -759,7 +759,7 @@ args=('--verbose', '-svvv', '--debug')
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_omit>] [hook]
         pytest_pycollect_makeitem [hook]
-            collector: <Module something_test.py>
+            collector: <Module worth_test.py>
             name: test_only
             obj: <function test_only at 0x103b88b80>
           pytest_generate_tests [hook]
@@ -767,19 +767,19 @@ args=('--verbose', '-svvv', '--debug')
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_only>] [hook]
         pytest_pycollect_makeitem [hook]
-            collector: <Module something_test.py>
+            collector: <Module worth_test.py>
             name: Model
-            obj: <class 'something_test.Model'>
+            obj: <class 'worth_test.Model'>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
-            collector: <Module something_test.py>
+            collector: <Module worth_test.py>
             name: test_plugin
             obj: <function test_plugin at 0x103b88c20>
           pytest_generate_tests [hook]
               metafunc: <_pytest.python.Metafunc object at 0x103b1da30>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_plugin>] [hook]
-      finish pytest_make_collect_report --> <CollectReport 'tests/something_test.py' lenresult=5 outcome='passed'> [hook]
+      finish pytest_make_collect_report --> <CollectReport 'tests/worth_test.py' lenresult=5 outcome='passed'> [hook]
     genitems <Function test_always> [collection]
       pytest_itemcollected [hook]
           item: <Function test_always>
@@ -801,7 +801,7 @@ args=('--verbose', '-svvv', '--debug')
           item: <Function test_plugin>
       finish pytest_itemcollected --> [] [hook]
       pytest_collectreport [hook]
-          report: <CollectReport 'tests/something_test.py' lenresult=5 outcome='passed'>
+          report: <CollectReport 'tests/worth_test.py' lenresult=5 outcome='passed'>
       finish pytest_collectreport --> [] [hook]
       pytest_collectreport [hook]
           report: <CollectReport 'tests' lenresult=1 outcome='passed'>
@@ -819,8 +819,8 @@ args=('--verbose', '-svvv', '--debug')
         pytest_report_collectionfinish [hook]
             config: <_pytest.config.Config object at 0x1038105f0>
             items: [<Function test_always>, <Function test_never>, <Function test_omit>, <Function test_only>, <Function test_plugin>]
-            start_path: /Users/x.barbosa/Sources/lab/py/something
-            startdir: /Users/x.barbosa/Sources/lab/py/something
+            start_path: /Users/x.barbosa/Sources/lab/py/worth
+            startdir: /Users/x.barbosa/Sources/lab/py/worth
         finish pytest_report_collectionfinish --> [] [hook]
       finish pytest_collection_finish --> [] [hook]
     finish pytest_collection --> None [hook]
@@ -830,8 +830,8 @@ args=('--verbose', '-svvv', '--debug')
           item: <Function test_always>
           nextitem: <Function test_never>
         pytest_runtest_logstart [hook]
-            nodeid: tests/something_test.py::test_always
-            location: ('tests/something_test.py', 5, 'test_always')
+            nodeid: tests/worth_test.py::test_always
+            location: ('tests/worth_test.py', 5, 'test_always')
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
             item: <Function test_always>
@@ -839,11 +839,11 @@ args=('--verbose', '-svvv', '--debug')
         pytest_runtest_makereport [hook]
             item: <Function test_always>
             call: <CallInfo when='setup' result: None>
-        finish pytest_runtest_makereport --> <TestReport 'tests/something_test.py::test_always' when='setup' outcome='passed'> [hook]
+        finish pytest_runtest_makereport --> <TestReport 'tests/worth_test.py::test_always' when='setup' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/something_test.py::test_always' when='setup' outcome='passed'>
+            report: <TestReport 'tests/worth_test.py::test_always' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/something_test.py::test_always' when='setup' outcome='passed'>
+              report: <TestReport 'tests/worth_test.py::test_always' when='setup' outcome='passed'>
               config: <_pytest.config.Config object at 0x1038105f0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
@@ -856,11 +856,11 @@ args=('--verbose', '-svvv', '--debug')
         pytest_runtest_makereport [hook]
             item: <Function test_always>
             call: <CallInfo when='call' result: None>
-        finish pytest_runtest_makereport --> <TestReport 'tests/something_test.py::test_always' when='call' outcome='passed'> [hook]
+        finish pytest_runtest_makereport --> <TestReport 'tests/worth_test.py::test_always' when='call' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/something_test.py::test_always' when='call' outcome='passed'>
+            report: <TestReport 'tests/worth_test.py::test_always' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/something_test.py::test_always' when='call' outcome='passed'>
+              report: <TestReport 'tests/worth_test.py::test_always' when='call' outcome='passed'>
               config: <_pytest.config.Config object at 0x1038105f0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
@@ -871,25 +871,25 @@ args=('--verbose', '-svvv', '--debug')
         pytest_runtest_makereport [hook]
             item: <Function test_always>
             call: <CallInfo when='teardown' result: None>
-        finish pytest_runtest_makereport --> <TestReport 'tests/something_test.py::test_always' when='teardown' outcome='passed'> [hook]
+        finish pytest_runtest_makereport --> <TestReport 'tests/worth_test.py::test_always' when='teardown' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/something_test.py::test_always' when='teardown' outcome='passed'>
+            report: <TestReport 'tests/worth_test.py::test_always' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/something_test.py::test_always' when='teardown' outcome='passed'>
+              report: <TestReport 'tests/worth_test.py::test_always' when='teardown' outcome='passed'>
               config: <_pytest.config.Config object at 0x1038105f0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
-            nodeid: tests/something_test.py::test_always
-            location: ('tests/something_test.py', 5, 'test_always')
+            nodeid: tests/worth_test.py::test_always
+            location: ('tests/worth_test.py', 5, 'test_always')
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
       pytest_runtest_protocol [hook]
           item: <Function test_never>
           nextitem: <Function test_omit>
         pytest_runtest_logstart [hook]
-            nodeid: tests/something_test.py::test_never
-            location: ('tests/something_test.py', 14, 'test_never')
+            nodeid: tests/worth_test.py::test_never
+            location: ('tests/worth_test.py', 14, 'test_never')
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
             item: <Function test_never>
@@ -897,11 +897,11 @@ args=('--verbose', '-svvv', '--debug')
         pytest_runtest_makereport [hook]
             item: <Function test_never>
             call: <CallInfo when='setup' result: None>
-        finish pytest_runtest_makereport --> <TestReport 'tests/something_test.py::test_never' when='setup' outcome='passed'> [hook]
+        finish pytest_runtest_makereport --> <TestReport 'tests/worth_test.py::test_never' when='setup' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/something_test.py::test_never' when='setup' outcome='passed'>
+            report: <TestReport 'tests/worth_test.py::test_never' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/something_test.py::test_never' when='setup' outcome='passed'>
+              report: <TestReport 'tests/worth_test.py::test_never' when='setup' outcome='passed'>
               config: <_pytest.config.Config object at 0x1038105f0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
@@ -914,11 +914,11 @@ args=('--verbose', '-svvv', '--debug')
         pytest_runtest_makereport [hook]
             item: <Function test_never>
             call: <CallInfo when='call' result: None>
-        finish pytest_runtest_makereport --> <TestReport 'tests/something_test.py::test_never' when='call' outcome='passed'> [hook]
+        finish pytest_runtest_makereport --> <TestReport 'tests/worth_test.py::test_never' when='call' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/something_test.py::test_never' when='call' outcome='passed'>
+            report: <TestReport 'tests/worth_test.py::test_never' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/something_test.py::test_never' when='call' outcome='passed'>
+              report: <TestReport 'tests/worth_test.py::test_never' when='call' outcome='passed'>
               config: <_pytest.config.Config object at 0x1038105f0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
@@ -929,25 +929,25 @@ args=('--verbose', '-svvv', '--debug')
         pytest_runtest_makereport [hook]
             item: <Function test_never>
             call: <CallInfo when='teardown' result: None>
-        finish pytest_runtest_makereport --> <TestReport 'tests/something_test.py::test_never' when='teardown' outcome='passed'> [hook]
+        finish pytest_runtest_makereport --> <TestReport 'tests/worth_test.py::test_never' when='teardown' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/something_test.py::test_never' when='teardown' outcome='passed'>
+            report: <TestReport 'tests/worth_test.py::test_never' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/something_test.py::test_never' when='teardown' outcome='passed'>
+              report: <TestReport 'tests/worth_test.py::test_never' when='teardown' outcome='passed'>
               config: <_pytest.config.Config object at 0x1038105f0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
-            nodeid: tests/something_test.py::test_never
-            location: ('tests/something_test.py', 14, 'test_never')
+            nodeid: tests/worth_test.py::test_never
+            location: ('tests/worth_test.py', 14, 'test_never')
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
       pytest_runtest_protocol [hook]
           item: <Function test_omit>
           nextitem: <Function test_only>
         pytest_runtest_logstart [hook]
-            nodeid: tests/something_test.py::test_omit
-            location: ('tests/something_test.py', 22, 'test_omit')
+            nodeid: tests/worth_test.py::test_omit
+            location: ('tests/worth_test.py', 22, 'test_omit')
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
             item: <Function test_omit>
@@ -955,11 +955,11 @@ args=('--verbose', '-svvv', '--debug')
         pytest_runtest_makereport [hook]
             item: <Function test_omit>
             call: <CallInfo when='setup' result: None>
-        finish pytest_runtest_makereport --> <TestReport 'tests/something_test.py::test_omit' when='setup' outcome='passed'> [hook]
+        finish pytest_runtest_makereport --> <TestReport 'tests/worth_test.py::test_omit' when='setup' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/something_test.py::test_omit' when='setup' outcome='passed'>
+            report: <TestReport 'tests/worth_test.py::test_omit' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/something_test.py::test_omit' when='setup' outcome='passed'>
+              report: <TestReport 'tests/worth_test.py::test_omit' when='setup' outcome='passed'>
               config: <_pytest.config.Config object at 0x1038105f0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
@@ -972,11 +972,11 @@ args=('--verbose', '-svvv', '--debug')
         pytest_runtest_makereport [hook]
             item: <Function test_omit>
             call: <CallInfo when='call' result: None>
-        finish pytest_runtest_makereport --> <TestReport 'tests/something_test.py::test_omit' when='call' outcome='passed'> [hook]
+        finish pytest_runtest_makereport --> <TestReport 'tests/worth_test.py::test_omit' when='call' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/something_test.py::test_omit' when='call' outcome='passed'>
+            report: <TestReport 'tests/worth_test.py::test_omit' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/something_test.py::test_omit' when='call' outcome='passed'>
+              report: <TestReport 'tests/worth_test.py::test_omit' when='call' outcome='passed'>
               config: <_pytest.config.Config object at 0x1038105f0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
@@ -987,25 +987,25 @@ args=('--verbose', '-svvv', '--debug')
         pytest_runtest_makereport [hook]
             item: <Function test_omit>
             call: <CallInfo when='teardown' result: None>
-        finish pytest_runtest_makereport --> <TestReport 'tests/something_test.py::test_omit' when='teardown' outcome='passed'> [hook]
+        finish pytest_runtest_makereport --> <TestReport 'tests/worth_test.py::test_omit' when='teardown' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/something_test.py::test_omit' when='teardown' outcome='passed'>
+            report: <TestReport 'tests/worth_test.py::test_omit' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/something_test.py::test_omit' when='teardown' outcome='passed'>
+              report: <TestReport 'tests/worth_test.py::test_omit' when='teardown' outcome='passed'>
               config: <_pytest.config.Config object at 0x1038105f0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
-            nodeid: tests/something_test.py::test_omit
-            location: ('tests/something_test.py', 22, 'test_omit')
+            nodeid: tests/worth_test.py::test_omit
+            location: ('tests/worth_test.py', 22, 'test_omit')
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
       pytest_runtest_protocol [hook]
           item: <Function test_only>
           nextitem: <Function test_plugin>
         pytest_runtest_logstart [hook]
-            nodeid: tests/something_test.py::test_only
-            location: ('tests/something_test.py', 26, 'test_only')
+            nodeid: tests/worth_test.py::test_only
+            location: ('tests/worth_test.py', 26, 'test_only')
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
             item: <Function test_only>
@@ -1013,11 +1013,11 @@ args=('--verbose', '-svvv', '--debug')
         pytest_runtest_makereport [hook]
             item: <Function test_only>
             call: <CallInfo when='setup' result: None>
-        finish pytest_runtest_makereport --> <TestReport 'tests/something_test.py::test_only' when='setup' outcome='passed'> [hook]
+        finish pytest_runtest_makereport --> <TestReport 'tests/worth_test.py::test_only' when='setup' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/something_test.py::test_only' when='setup' outcome='passed'>
+            report: <TestReport 'tests/worth_test.py::test_only' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/something_test.py::test_only' when='setup' outcome='passed'>
+              report: <TestReport 'tests/worth_test.py::test_only' when='setup' outcome='passed'>
               config: <_pytest.config.Config object at 0x1038105f0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
@@ -1030,11 +1030,11 @@ args=('--verbose', '-svvv', '--debug')
         pytest_runtest_makereport [hook]
             item: <Function test_only>
             call: <CallInfo when='call' result: None>
-        finish pytest_runtest_makereport --> <TestReport 'tests/something_test.py::test_only' when='call' outcome='passed'> [hook]
+        finish pytest_runtest_makereport --> <TestReport 'tests/worth_test.py::test_only' when='call' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/something_test.py::test_only' when='call' outcome='passed'>
+            report: <TestReport 'tests/worth_test.py::test_only' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/something_test.py::test_only' when='call' outcome='passed'>
+              report: <TestReport 'tests/worth_test.py::test_only' when='call' outcome='passed'>
               config: <_pytest.config.Config object at 0x1038105f0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
@@ -1045,25 +1045,25 @@ args=('--verbose', '-svvv', '--debug')
         pytest_runtest_makereport [hook]
             item: <Function test_only>
             call: <CallInfo when='teardown' result: None>
-        finish pytest_runtest_makereport --> <TestReport 'tests/something_test.py::test_only' when='teardown' outcome='passed'> [hook]
+        finish pytest_runtest_makereport --> <TestReport 'tests/worth_test.py::test_only' when='teardown' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/something_test.py::test_only' when='teardown' outcome='passed'>
+            report: <TestReport 'tests/worth_test.py::test_only' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/something_test.py::test_only' when='teardown' outcome='passed'>
+              report: <TestReport 'tests/worth_test.py::test_only' when='teardown' outcome='passed'>
               config: <_pytest.config.Config object at 0x1038105f0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
-            nodeid: tests/something_test.py::test_only
-            location: ('tests/something_test.py', 26, 'test_only')
+            nodeid: tests/worth_test.py::test_only
+            location: ('tests/worth_test.py', 26, 'test_only')
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
       pytest_runtest_protocol [hook]
           item: <Function test_plugin>
           nextitem: None
         pytest_runtest_logstart [hook]
-            nodeid: tests/something_test.py::test_plugin
-            location: ('tests/something_test.py', 36, 'test_plugin')
+            nodeid: tests/worth_test.py::test_plugin
+            location: ('tests/worth_test.py', 36, 'test_plugin')
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
             item: <Function test_plugin>
@@ -1071,11 +1071,11 @@ args=('--verbose', '-svvv', '--debug')
         pytest_runtest_makereport [hook]
             item: <Function test_plugin>
             call: <CallInfo when='setup' result: None>
-        finish pytest_runtest_makereport --> <TestReport 'tests/something_test.py::test_plugin' when='setup' outcome='passed'> [hook]
+        finish pytest_runtest_makereport --> <TestReport 'tests/worth_test.py::test_plugin' when='setup' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/something_test.py::test_plugin' when='setup' outcome='passed'>
+            report: <TestReport 'tests/worth_test.py::test_plugin' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/something_test.py::test_plugin' when='setup' outcome='passed'>
+              report: <TestReport 'tests/worth_test.py::test_plugin' when='setup' outcome='passed'>
               config: <_pytest.config.Config object at 0x1038105f0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
@@ -1092,18 +1092,18 @@ args=('--verbose', '-svvv', '--debug')
         pytest_runtest_makereport [hook]
             item: <Function test_plugin>
             call: <CallInfo when='call' excinfo=<ExceptionInfo AssertionError("assert 1 == Model(name='foo', email='OTHER')\n +  where Model(name='foo', email='OTHER') = Model('foo', 'OTHER')") tblen=36>>
-        finish pytest_runtest_makereport --> <TestReport 'tests/something_test.py::test_plugin' when='call' outcome='failed'> [hook]
+        finish pytest_runtest_makereport --> <TestReport 'tests/worth_test.py::test_plugin' when='call' outcome='failed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/something_test.py::test_plugin' when='call' outcome='failed'>
+            report: <TestReport 'tests/worth_test.py::test_plugin' when='call' outcome='failed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/something_test.py::test_plugin' when='call' outcome='failed'>
+              report: <TestReport 'tests/worth_test.py::test_plugin' when='call' outcome='failed'>
               config: <_pytest.config.Config object at 0x1038105f0>
           finish pytest_report_teststatus --> ('failed', 'F', 'FAILED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_exception_interact [hook]
             node: <Function test_plugin>
             call: <CallInfo when='call' excinfo=<ExceptionInfo AssertionError("assert 1 == Model(name='foo', email='OTHER')\n +  where Model(name='foo', email='OTHER') = Model('foo', 'OTHER')") tblen=36>>
-            report: <TestReport 'tests/something_test.py::test_plugin' when='call' outcome='failed'>
+            report: <TestReport 'tests/worth_test.py::test_plugin' when='call' outcome='failed'>
         finish pytest_exception_interact --> [] [hook]
         pytest_runtest_teardown [hook]
             item: <Function test_plugin>
@@ -1112,17 +1112,17 @@ args=('--verbose', '-svvv', '--debug')
         pytest_runtest_makereport [hook]
             item: <Function test_plugin>
             call: <CallInfo when='teardown' result: None>
-        finish pytest_runtest_makereport --> <TestReport 'tests/something_test.py::test_plugin' when='teardown' outcome='passed'> [hook]
+        finish pytest_runtest_makereport --> <TestReport 'tests/worth_test.py::test_plugin' when='teardown' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/something_test.py::test_plugin' when='teardown' outcome='passed'>
+            report: <TestReport 'tests/worth_test.py::test_plugin' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/something_test.py::test_plugin' when='teardown' outcome='passed'>
+              report: <TestReport 'tests/worth_test.py::test_plugin' when='teardown' outcome='passed'>
               config: <_pytest.config.Config object at 0x1038105f0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
-            nodeid: tests/something_test.py::test_plugin
-            location: ('tests/something_test.py', 36, 'test_plugin')
+            nodeid: tests/worth_test.py::test_plugin
+            location: ('tests/worth_test.py', 36, 'test_plugin')
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
     finish pytest_runtestloop --> True [hook]
@@ -1135,7 +1135,7 @@ args=('--verbose', '-svvv', '--debug')
           config: <_pytest.config.Config object at 0x1038105f0>
       early skip of rewriting module: pygments [assertion]
         pytest_report_teststatus [hook]
-            report: <TestReport 'tests/something_test.py::test_plugin' when='call' outcome='failed'>
+            report: <TestReport 'tests/worth_test.py::test_plugin' when='call' outcome='failed'>
             config: <_pytest.config.Config object at 0x1038105f0>
         finish pytest_report_teststatus --> ('failed', 'F', 'FAILED') [hook]
       finish pytest_terminal_summary --> [] [hook]

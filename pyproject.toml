@@ -1,18 +1,22 @@
 [tool.poetry]
-name = "something"
+name = "worth"
 version = "0.1.0"
 description = "Assert relevant object attributes"
+license = "BSD-3-Clause"
 authors = ["Xavier Barbosa <clint.northwood@gmail.com>"]
 readme = "README.md"
-packages = [
-    {include = "something", from="src"}
-]
+repository = "https://github.com/johnnoone/worth"
+keywords = ["test", "assertion"]
+packages = [{ include = "worth", from = "src" }]
 classifiers = [
-    "Framework :: Pytest"
+    "Development Status :: 3 - Alpha",
+    "Framework :: Pytest",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Testing :: Mocking",
 ]
 
 [tool.poetry.plugins."pytest11"]
-something = "something.pytest_plugin"
+worth = "worth.pytest_plugin"
 
 [tool.poetry.dependencies]
 python = "^3.10"

@@ -3,22 +3,22 @@ from typing import Any, Mapping
 import pytest
 from _pytest.assertion.util import assertrepr_compare
 
-import something
+import worth
 
 
 def pytest_assertrepr_compare(
     config: pytest.Config, op: str, left: Any, right: Any
 ) -> list[str] | None:
-    if isinstance(left, something.Always | something.Never):
+    if isinstance(left, worth.Always | worth.Never):
         return [f"{right!r} never match"]
-    if isinstance(right, something.Always | something.Never):
+    if isinstance(right, worth.Always | worth.Never):
         return [f"{left!r} never match"]
 
     patched = False
-    if isinstance(left, something.Patched):
+    if isinstance(left, worth.Patched):
         patched = True
         left = left.wrapped
-    if isinstance(right, something.Patched):
+    if isinstance(right, worth.Patched):
         patched = True
         right = right.wrapped
 
@@ -26,10 +26,10 @@ def pytest_assertrepr_compare(
         return assertrepr_compare(config, op, left, right)
 
     contained = False
-    if isinstance(left, Mapping) and isinstance(right, something.contains):
+    if isinstance(left, Mapping) and isinstance(right, worth.contains):
         contained = True
         right = dict(left) | dict(right.data)
-    if isinstance(left, something.contains) and isinstance(right, Mapping):
+    if isinstance(left, worth.contains) and isinstance(right, Mapping):
         contained = True
         left = dict(right) | dict(left.data)
 

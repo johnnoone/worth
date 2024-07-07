@@ -1,13 +1,12 @@
-# Something
+# Worth
 
+Worth is a Python library that helps you assert relevant object attributes
 
-Something is a Python library that helps you assert relevant object attributes
 
 For example
 
-
 ```python
-from something import Omit
+from worth import Omit
 
 def test_something_like():
     a = Model(id=12345, name="Hoff")

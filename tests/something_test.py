@@ -2,8 +2,8 @@ from dataclasses import dataclass
 
 from _pytest.assertion.util import assertrepr_compare
 import pytest
-from something import Always, Never, Omit, Only, contains
-from something.pytest_plugin import pytest_assertrepr_compare
+from worth import Always, Never, Omit, Only, contains
+from worth.pytest_plugin import pytest_assertrepr_compare
 
 
 def test_always():
@@ -66,7 +66,6 @@ def test_contains():
     assert {"foo": 24, "bar": "baz", "qux": None} == contains({"foo": 24})
     assert {"foo": 24, "bar": "baz", "qux": None} != contains({"foo": 42})
     assert ({"foo": 24, "bar": "baz", "qux": None} == contains({"foo": 42})) is False
-    assert {"foo": 24, "bar": "baz", "qux": None} == contains({"foo": 42})
 
 
 def test_contains_non_supported_operations():
