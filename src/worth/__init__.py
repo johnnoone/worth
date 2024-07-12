@@ -68,6 +68,29 @@ class Patched(Generic[T]):
         self.obj = obj
         self.wrapped = wrapped
 
+    def __or__(self, obj: T) -> Patched[T]:
+        if (
+            isinstance(obj, Omit)
+            and dataclasses.is_dataclass(self.wrapped)
+            and not isinstance(self.wrapped, type)
+        ):
+            changes = dict.fromkeys(obj.attrs, Always())
+            wrapped = dataclasses.replace(self.wrapped, **changes)
+            return Patched(self.obj, wrapped)  # type: ignore
+        elif (
+            isinstance(obj, Only)
+            and dataclasses.is_dataclass(self.wrapped)
+            and not isinstance(self.wrapped, type)
+        ):
+            all_fields = set()
+            for field in dataclasses.fields(self.wrapped):
+                all_fields.add(field.name)
+            changes = dict.fromkeys(all_fields - obj.attrs, Always())
+            wrapped = dataclasses.replace(self.wrapped, **changes)
+            return Patched(self.obj, wrapped)  # type: ignore
+        else:
+            raise NotImplementedError
+
     def __eq__(self, other: Any) -> bool:
         return self.wrapped == other
 

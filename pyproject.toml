@@ -20,6 +20,10 @@ worth = "worth.pytest_plugin"
 
 [tool.poetry.dependencies]
 python = "^3.10"
+attrs = { version = "*", optional = true }
+
+[tool.poetry.extras]
+attrs = ["attrs"]
 
 [tool.poetry.group.dev.dependencies]
 ruff = "*"

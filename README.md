@@ -71,3 +71,11 @@ Things that applies to mappings
 assert {"foo": 42, "bar": True} == contains({"foo": 42})
 assert {"foo": 42, "bar": True} != contains({"foo": "wrong"})
 ```
+
+
+## TODO
+
+- [*] dataclasses
+- [ ] attrs
+- [ ] msgspec
+- [ ] vanilla
