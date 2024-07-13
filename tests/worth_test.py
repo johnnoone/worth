@@ -1,7 +1,8 @@
 from dataclasses import dataclass
-
-from _pytest.assertion.util import assertrepr_compare
+import attrs
+import msgspec
 import pytest
+from _pytest.assertion.util import assertrepr_compare
 from worth import Always, Never, Omit, Only, contains
 from worth.pytest_plugin import pytest_assertrepr_compare
 
@@ -31,18 +32,38 @@ def test_never_boolean():
     assert bool(Never()) is False
 
 
-def test_omit():
-    assert Model("foo", "bar") == Model("foo", "OTHER") | Omit("email")
-
-
-def test_only():
-    assert Model("foo", "bar") == Model("foo", "OTHER") | Only("name")
-
-
 @dataclass
 class Model:
     name: str
     email: str
+
+
+@attrs.define
+class AttrsModel:
+    name: str
+    email: str
+
+
+class MessageSpecModel(msgspec.Struct):
+    name: str
+    email: str
+
+
+models = [Model, AttrsModel, MessageSpecModel, dict]
+
+
+@pytest.mark.parametrize("Model", models)
+def test_omit(Model):
+    assert Model(name="foo", email="bar") == Model(name="foo", email="OTHER") | Omit(
+        "email"
+    )
+
+
+@pytest.mark.parametrize("Model", models)
+def test_only(Model):
+    assert Model(name="foo", email="bar") == Model(name="foo", email="OTHER") | Only(
+        "name"
+    )
 
 
 def test_plugin(request):

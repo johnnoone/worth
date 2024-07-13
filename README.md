@@ -75,7 +75,7 @@ assert {"foo": 42, "bar": True} != contains({"foo": "wrong"})
 
 ## TODO
 
-- [*] dataclasses
-- [ ] attrs
-- [ ] msgspec
+- [x] dataclasses
+- [x] attrs
+- [x] msgspec
 - [ ] vanilla

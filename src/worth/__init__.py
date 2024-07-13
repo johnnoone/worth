@@ -1,9 +1,10 @@
 from __future__ import annotations
 
-import dataclasses
-from typing import Any, Generic, Mapping, TypeVar
+from typing import Any, Mapping
 
-T = TypeVar("T")
+from ._patches import Omit, Only, Patched
+
+__all__ = ["Omit", "Only", "Patched"]
 
 
 class Always:
@@ -26,73 +27,6 @@ class Never:
 
     def __repr__(self) -> str:
         return "Never()"
-
-
-class Omit:
-    def __init__(self, *attrs: str) -> None:
-        self.attrs = frozenset(attrs)
-
-    def __ror__(self, obj: T) -> Patched[T]:
-        if dataclasses.is_dataclass(obj) and not isinstance(obj, type):
-            changes = dict.fromkeys(self.attrs, Always())
-            wrapped = dataclasses.replace(obj, **changes)
-            return Patched(obj, wrapped)  # type: ignore
-        else:
-            raise NotImplementedError
-
-    def __eq__(self, other: Any) -> bool:
-        raise Exception("Omit object is not comparable")
-
-
-class Only:
-    def __init__(self, *attrs: str) -> None:
-        self.attrs = frozenset(attrs)
-
-    def __ror__(self, obj: T) -> Patched[T]:
-        if dataclasses.is_dataclass(obj) and not isinstance(obj, type):
-            all_fields = set()
-            for field in dataclasses.fields(obj):
-                all_fields.add(field.name)
-            changes = dict.fromkeys(all_fields - self.attrs, Always())
-            wrapped = dataclasses.replace(obj, **changes)
-            return Patched(obj, wrapped)  # type: ignore
-        else:
-            raise NotImplementedError
-
-    def __eq__(self, other: Any) -> bool:
-        raise Exception("Only object is not comparable")
-
-
-class Patched(Generic[T]):
-    def __init__(self, obj: T, wrapped: T) -> None:
-        self.obj = obj
-        self.wrapped = wrapped
-
-    def __or__(self, obj: T) -> Patched[T]:
-        if (
-            isinstance(obj, Omit)
-            and dataclasses.is_dataclass(self.wrapped)
-            and not isinstance(self.wrapped, type)
-        ):
-            changes = dict.fromkeys(obj.attrs, Always())
-            wrapped = dataclasses.replace(self.wrapped, **changes)
-            return Patched(self.obj, wrapped)  # type: ignore
-        elif (
-            isinstance(obj, Only)
-            and dataclasses.is_dataclass(self.wrapped)
-            and not isinstance(self.wrapped, type)
-        ):
-            all_fields = set()
-            for field in dataclasses.fields(self.wrapped):
-                all_fields.add(field.name)
-            changes = dict.fromkeys(all_fields - obj.attrs, Always())
-            wrapped = dataclasses.replace(self.wrapped, **changes)
-            return Patched(self.obj, wrapped)  # type: ignore
-        else:
-            raise NotImplementedError
-
-    def __eq__(self, other: Any) -> bool:
-        return self.wrapped == other
 
 
 class contains:

@@ -21,14 +21,20 @@ worth = "worth.pytest_plugin"
 [tool.poetry.dependencies]
 python = "^3.10"
 attrs = { version = "*", optional = true }
+msgspec = { version = "*", optional = true }
 
 [tool.poetry.extras]
 attrs = ["attrs"]
+msgspec = ["msgspec"]
 
 [tool.poetry.group.dev.dependencies]
 ruff = "*"
 pytest = "*"
 mypy = "*"
+
+[tool.ruff.lint]
+fixable = ["ALL"]
+ignore = ["E731"]
 
 [build-system]
 requires = ["poetry-core"]
