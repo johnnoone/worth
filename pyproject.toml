@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "worth"
-version = "0.1.0"
+version = "0.2.0"
 description = "Assert relevant object attributes"
 license = "BSD-3-Clause"
 authors = ["Xavier Barbosa <clint.northwood@gmail.com>"]
@@ -22,6 +22,7 @@ worth = "worth.pytest_plugin"
 python = "^3.10"
 attrs = { version = "*", optional = true }
 msgspec = { version = "*", optional = true }
+typing-extensions = "*"
 
 [tool.poetry.extras]
 attrs = ["attrs"]

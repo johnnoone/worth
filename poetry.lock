@@ -269,4 +269,4 @@ msgspec = ["msgspec"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "0c26965317e6c1a1f0de2d07a2f5ab1387e93fee227d12cb5cfd56c4ed6e780c"
+content-hash = "0bdba8c661124b8344745cbb00870891289984eeab20c31e7a788c099d330850"

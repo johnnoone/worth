@@ -1,13 +1,15 @@
 from dataclasses import dataclass
+
 import attrs
 import msgspec
 import pytest
 from _pytest.assertion.util import assertrepr_compare
-from worth import Always, Never, Omit, Only, contains
+
+from worth import Always, Never, Omit, OneOf, Only, contains
 from worth.pytest_plugin import pytest_assertrepr_compare
 
 
-def test_always():
+def test_always_as_callable():
     assert (1 == Always()) is True
     assert ({} == Always()) is True
     assert ({"foo": 42} == Always()) is True
@@ -16,11 +18,21 @@ def test_always():
     assert Model("foo", "bar") == Model(Always(), "bar")
 
 
+def test_always_as_constant():
+    assert (1 == Always) is True
+    assert ({} == Always) is True
+    assert ({"foo": 42} == Always) is True
+
+    assert Model("foo", "bar") == Model("foo", "bar")
+    assert Model("foo", "bar") == Model(Always, "bar")
+
+
 def test_always_boolean():
     assert bool(Always()) is True
+    assert bool(Always) is True
 
 
-def test_never():
+def test_never_as_callable():
     assert (1 == Never()) is False
     assert ({} == Never()) is False
     assert ({"foo": 42} == Never()) is False
@@ -28,8 +40,29 @@ def test_never():
     assert Model("foo", "bar") != Model(Never(), "bar")
 
 
+def test_never_as_constant():
+    assert (1 == Never) is False
+    assert ({} == Never) is False
+    assert ({"foo": 42} == Never) is False
+
+    assert Model("foo", "bar") != Model(Never, "bar")
+
+
 def test_never_boolean():
     assert bool(Never()) is False
+    assert bool(Never) is False
+
+
+def test_one_of():
+    assert 1 == OneOf(1, 2, 3)
+    assert 2 == OneOf(1, 2, 3)
+    assert 3 == OneOf(1, 2, 3)
+    assert 4 != OneOf(1, 2, 3)
+
+
+def test_one_of_boolean():
+    with pytest.raises(TypeError):
+        bool(OneOf(1, 2, 3))
 
 
 @dataclass
@@ -98,3 +131,9 @@ def test_contains_non_supported_operations():
         {} > contains({})
     with pytest.raises(TypeError):
         {} >= contains({})
+
+
+def test_contains_composition():
+    assert {"foo": {"bar": 42}, "baz": 100} == contains(
+        {"foo": contains({"bar": Always})}
+    )

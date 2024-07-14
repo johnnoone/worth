@@ -9,9 +9,9 @@ import worth
 def pytest_assertrepr_compare(
     config: pytest.Config, op: str, left: Any, right: Any
 ) -> list[str] | None:
-    if isinstance(left, worth.Always | worth.Never):
+    if isinstance(left, worth._Predicate):
         return [f"{right!r} never match"]
-    if isinstance(right, worth.Always | worth.Never):
+    if isinstance(right, worth._Predicate):
         return [f"{left!r} never match"]
 
     patched = False
