@@ -37,8 +37,18 @@ assert 42 == Never()
 assert False == Never()
 ```
 
+**OneOf**
 
-Things that applies to dataclasses
+`OneOf()` asserts one of its values.
+
+```python
+assert "foo" == OneOf("foo", "bar")
+assert "bar" == OneOf("foo", "bar")
+assert "qux" != OneOf("foo", "bar")
+```
+
+
+Things that applies to models (dataclasses, attrs, or msgspec)
 
 **Omit**
 
